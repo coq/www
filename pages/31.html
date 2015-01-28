@@ -93,6 +93,32 @@ They can all be installed by typing
 opam install coq:something
 </pre>
 
+<div class="framework"><div class="frameworklabel">Version compatibility</div>
+<div class="frameworkcontent">
+
+<p>Not all Coq packages are available for all Coq versions. If you have
+installed Coq 8.4 through OPAM, and try to install a 8.5-only package,
+the dependency solver will propose to uninstall Coq 8.4 and install
+Coq 8.5 instead -- this is probably not what you want, if only because
+of compilation times. You may "pin" the Coq package to a specific
+version to avoid such propositions (<code>opam show coq</code> will
+show you which version you have installed).</p>
+
+<pre>
+opam pin coq 8.4.5
+</pre>
+
+<p>See <code>opam pin --help</code> for how to un-pin. <!-- note: OPAM
+1.1.1 and OPAM 1.2 have incompatible pinning command languages, so
+I was careful *not* to give a precise command that would not work for
+some users. --> If you wish to maintain several Coq setups in parallel,
+with different versions, you may either
+use <a href="http://opam.ocaml.org/doc/Usage.html#opamswitch">opam
+switches</a>, a common mechanism for having independent OPAM setups
+and juggling between them, or use project-local roots (if you are
+ready to recompile Coq for each project) as
+described <a href="http://coq-blog.clarus.me/use-opam-for-coq.html">here</a>.
+
 </div> </div>
 
 
