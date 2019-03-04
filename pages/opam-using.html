@@ -1,5 +1,5 @@
 <#def TITLE>Installing Coq via OPAM</#def>
-<#def OCAMLV>4.02.3</#def>
+<#def OCAMLV>4.07.1</#def>
 <#include "incl/macros.html">
 <#include "incl/header.html">
 <h2>What is OPAM</h2>
@@ -23,7 +23,9 @@ proceed as follows (using opam 2):</p>
 # Initialize the opam root (at ~/.opam by default) and create a switch named "with-coq-<#CURRENTVERSION>"
 # This will prompt you to allow opam to set up initialization scripts, which is generally fine to accept.
 # "-j 2" is the number of CPU cores to use.
-opam init --switch=with-coq-<#CURRENTVERSION> --compiler=ocaml-base-compiler.<#OCAMLV> -j 2
+# By default the global OCaml installation will be used. opam can also install and use a different
+# version of OCaml (e.g., <#OCAMLV>) by adding here the option "--compiler=ocaml-base-compiler.<#OCAMLV>".
+opam init --switch=with-coq-<#CURRENTVERSION> -j 2
 
 # Activate the repository for Coq packages.
 opam repo add coq-released http://coq.inria.fr/opam/released
