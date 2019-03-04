@@ -11,7 +11,7 @@ Instructions on
 itself are available on the OPAM website.</p>
 
 <p>By following the instructions on this web page one installs the last stable
-version of Coq and all additional packages in the directory <code>~/opam-coq.<#CURRENTVERSION></code>.
+version of Coq and all additional packages in a <em>switch</em> <code>with-coq-<#CURRENTVERSION></code>.
 Instructions target an OPAM newcomer.</p>
 
 <h2>Using OPAM to install Coq</h2>
@@ -19,10 +19,17 @@ Instructions target an OPAM newcomer.</p>
 <p>Once the <code>opam</code> command is available, i.e. OPAM is installed, one can
 proceed as follows (using opam 2):</p>
 
-<pre><code>export OPAMROOT=~/opam-coq.<#CURRENTVERSION> # installation directory
-opam init -n --comp=ocaml-base-compiler.<#OCAMLV> -j 2 # 2 is the number of CPU cores
+<pre><code>
+# Initialize the opam root (at ~/.opam by default) and create a switch named "with-coq-<#CURRENTVERSION>"
+# This will prompt you to allow opam to set up initialization scripts, which is generally fine to accept.
+# "-j 2" is the number of CPU cores to use.
+opam init --switch=with-coq-<#CURRENTVERSION> --compiler=ocaml-base-compiler.<#OCAMLV> -j 2
+
+# Activate the repository for Coq packages.
 opam repo add coq-released http://coq.inria.fr/opam/released
-opam install coq.<#CURRENTVERSION> &amp;&amp; opam pin add coq <#CURRENTVERSION>
+
+# Pin the coq package to version <#CURRENTVERSION> and install it.
+opam pin add coq <#CURRENTVERSION>
 </code></pre>
 
 <p>If using <code>opam 1.2</code>, the <code>init</code> command should be:</p>
@@ -42,14 +49,15 @@ for Proof-General.</p>
 
 <h2>Running Coq</h2>
 
-<p>Every time a new shell is opened one has to type in the following lines
-in order to use Coq</p>
+<p>If you couldn't allow <code>opam</code> to set up initialization scripts
+at the <code>opam init</code> step above,
+every time a new shell is opened you have to type in the following lines in order to use Coq:</p>
 
-<pre><code>export OPAMROOT=~/opam-coq.<#CURRENTVERSION>
+<pre><code>
 eval `opam config env`
 </code></pre>
 
-<p>After that <code>coqc -v</code> shall run and print the version of Coq.</p>
+<p>To check that the installation was successful, <code>coqc -v</code> should print the version of Coq.</p>
 
 <h2>Using OPAM to install Coq packages</h2>
 
