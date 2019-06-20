@@ -1,0 +1,15 @@
+<#def ID>coq-8-10beta2-is-out</#def>
+<#def TITLE>Coq 8.10+beta2 is out</#def>
+<#def AUTHOR>Vincent Laporte</#def>
+<#def DATE>June 20th, 2019</#def>
+<#def DESCR>
+<p>The <a href="https://github.com/coq/coq/releases/tag/V8.10+beta2">first
+beta release of Coq 8.10</a> is available for testing.</p>
+
+<p>This second β version includes many bug fixes and documentation
+improvements; more details are given in the <a href="https://coq.github.io/doc/v8.10/refman/changes.html#changes-in-8-10-beta2">reference manual</a>.</p>
+
+<p>Feedback and <a href="https://github.com/coq/coq/issues">bug
+reports</a> are extremely welcome.</p>
+</#def>
+
