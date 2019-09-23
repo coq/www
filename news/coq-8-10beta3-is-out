@@ -6,7 +6,7 @@
 <p>The <a href="https://github.com/coq/coq/releases/tag/V8.10+beta3">third
 beta release of Coq 8.10</a> is available for testing.</p>
 
-<p>This third β version includes various bug fixes, including:</p>
+<p>This third β version includes various bug fixes and improvements, including:</p>
 <ul>
 <li>improved warning on coercion path ambiguity;</li>
 <li>support for OCaml extraction of primitive machine integers;</li>
