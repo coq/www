@@ -1,0 +1,18 @@
+<#def ID>coq-8-10-2-is-out</#def>
+<#def TITLE>Coq 8.10.2 is out</#def>
+<#def AUTHOR>Vincent Laporte</#def>
+<#def DATE>November 29th, 2019</#def>
+<#def DESCR>
+<p>The <a href="https://github.com/coq/coq/releases/tag/V8.10.2">8.10.2 release of Coq</a> is available.</p>
+<p>Main changes:</p>
+<ul>
+<li>Fixed a critical bug of template polymorphism and nonlinear universes</li>
+<li>Fixed a few anomalies</li>
+<li>Fixed an 8.10 regression related to the printing of coercions associated to notations</li>
+<li>Fixed uneven dimensions of CoqIDE panels when window has been resized</li>
+<li>Fixed queries in CoqIDE</li>
+</ul>
+<p>All details can be found in the <a href="https://coq.github.io/doc/V8.10.2/refman/changes.html#changes-in-8-10-2">user manual</a>.</p>
+<p>Feedback and <a href="https://github.com/coq/coq/issues">bug reports</a> are extremely welcome.</p>
+</#def>
+
